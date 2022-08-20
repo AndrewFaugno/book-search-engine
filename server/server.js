@@ -4,6 +4,7 @@ const path = require("path");
 const { ApolloServer } = require("apollo-server-express");
 
 // TODO: middleWare auth
+const { authMiddleware } = require('./utils/auth');
 
 // import typeDefs and resolvers
 const { typeDefs, resolvers } = require("./schemas");
@@ -14,12 +15,12 @@ const PORT = process.env.PORT || 3001;
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  // TODO context: authMiddleware
+  context: authMiddleware
 });
 
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // if we're in production, serve client/build as static assets
@@ -41,3 +42,7 @@ const startApolloServer = async (typeDefs, resolvers) => {
     });
   });
 };
+
+
+// call async function to start the server
+startApolloServer(typeDefs, resolvers);
