@@ -2,7 +2,8 @@
   ![](https://img.shields.io/badge/License-MIT-blue)
 
   ## Description
-  Book Search Engine is a website designed to allow users to login/signup, search and then save books. The user then can view all their saved books and delete them. <br>
+  Book Search Engine is a website designed to allow users to login/signup, search and then save books. The user then can view all their saved books and delete them. <br>   <br>
+  Deployed project website can be found [here!](https://book-search-andrewfaugno.herokuapp.com/)
   ![image](https://user-images.githubusercontent.com/93367297/185729339-d964b77d-14e9-4401-a212-832937402500.png)
 
 
